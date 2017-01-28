@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView android:text="@string/AT_CMD" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtATCMD"
+        android:layout_marginLeft="75dp"
+        android:elegantTextHeight="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:clickable="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Decollage"
+        android:id="@+id/buttDecollage"
+        android:onClick="Decollage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#85ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Aterissage_"
+        android:id="@+id/buttAtterissage"
+        android:onClick="Aterissage"
+        android:layout_centerHorizontal="true"
+        android:background="#85ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Urgency"
+        android:id="@+id/buttUrgence"
+        android:onClick="Urgence"
+        android:layout_alignParentEnd="true"
+        android:background="#85ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="XMS"
+        android:id="@+id/indic_periodic_task"
+        android:layout_alignBottom="@+id/txtATCMD"
+        android:layout_alignParentStart="true" />
+
+    <com.example.admin.pilotage.JoystickView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/JoyRight"
+        android:layout_row="41"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="110dp"
+        android:layout_marginRight="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Altitude"
+        android:id="@+id/indic_altitude"
+        android:layout_below="@+id/buttAtterissage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#0015ff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED"
+        android:id="@+id/butt_led"
+        android:onClick="Led"
+        android:background="#85ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/butt_shot" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOT"
+        android:id="@+id/butt_shot"
+        android:onClick="Shot"
+        android:background="#85ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Batterie"
+        android:id="@+id/indic_batterie"
+        android:textColor="#0015ff"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignBaseline="@+id/buttDecollage"
+        android:layout_alignBottom="@+id/buttDecollage"
+        android:layout_toEndOf="@+id/buttDecollage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Vitesse"
+        android:id="@+id/indic_vitesse"
+        android:layout_below="@+id/indic_altitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="#0015ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Avant / Arriere"
+        android:id="@+id/indic_avant_arriere"
+        android:layout_below="@+id/indic_vitesse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="#0015ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gauche / Droite"
+        android:id="@+id/indic_gauche_droite"
+        android:layout_below="@+id/indic_avant_arriere"
+        android:layout_alignEnd="@+id/indic_avant_arriere"
+        android:layout_marginTop="5dp"
+        android:textColor="#0015ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Rotation"
+        android:id="@+id/indic_rotation"
+        android:layout_below="@+id/indic_gauche_droite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="#0015ff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Données vol"
+        android:id="@+id/butt_data_flying"
+        android:onClick="ShowSimpleFlightData"
+        android:enabled="true"
+        android:clickable="false"
+        android:layout_below="@+id/JoyRight"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Av/Arr :"
+        android:id="@+id/txtDebugAv_Arr"
+        android:textColor="#ff0000"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/indic_altitude"
+        android:layout_alignStart="@+id/indic_batterie" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="G/D :"
+        android:id="@+id/txt_Debug_GD"
+        android:textColor="#ff0000"
+        android:textSize="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@+id/indic_rotation"
+        android:layout_alignStart="@+id/txtDebugAv_Arr" />
+
+
+</RelativeLayout>

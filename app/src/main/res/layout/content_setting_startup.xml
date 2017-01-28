@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_setting_startup"
+    tools:context="com.example.admin.pilotage.SettingStartupActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Indicateurs "
+        android:id="@+id/text_Indicateurs"
+        android:layout_marginLeft="15dp"
+        android:layout_alignBaseline="@+id/chk_battery"
+        android:layout_alignBottom="@+id/chk_battery"
+        android:layout_alignParentStart="false"
+        android:layout_marginStart="14dp"
+        android:enabled="true"
+        android:textStyle="bold|normal|italic"
+        android:editable="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/battery"
+        android:id="@+id/chk_battery"
+        android:textAlignment="textEnd"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/text_Indicateurs"
+        android:layout_marginLeft="2dp"
+        android:layout_alignParentEnd="false"
+        android:singleLine="false"
+        android:layout_alignParentStart="false"
+        android:allowUndo="false"
+        android:layout_marginTop="5dp"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/altitude"
+        android:id="@+id/chk_altitude"
+        android:textAlignment="textEnd"
+        android:layout_marginLeft="5dp"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/chk_battery"
+        android:layout_marginTop="5dp"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vitesse"
+        android:id="@+id/chk_vitesse"
+        android:textAlignment="textEnd"
+        android:layout_marginLeft="5dp"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_toEndOf="@+id/chk_altitude"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avant_arriere"
+        android:id="@+id/chk_av_arr"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_alignStart="@+id/chk_battery"
+        android:layout_marginTop="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gauche_droite_2"
+        android:id="@+id/chk_gd"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignTop="@+id/chk_altitude"
+        android:layout_alignStart="@+id/chk_altitude"
+        android:layout_marginTop="35dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rotation2"
+        android:id="@+id/chk_rotation"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignStart="@+id/chk_vitesse"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Vidéo"
+        android:id="@+id/text_video"
+        android:layout_marginLeft="15dp"
+        android:layout_toStartOf="@+id/chk_battery"
+        android:layout_marginTop="82dp" />
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ON/OFF"
+        android:id="@+id/chk_video_mode"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_alignStart="@+id/chk_battery"
+        android:layout_marginTop="70dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Debug"
+        android:id="@+id/text_debug"
+        android:layout_marginLeft="40dp"
+        android:layout_alignTop="@+id/text_video"
+        android:layout_alignStart="@+id/chk_gd" />
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ON/OFF"
+        android:id="@+id/chk_debug"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="true"
+        android:layout_alignTop="@+id/chk_video_mode"
+        android:layout_alignStart="@+id/chk_rotation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Interface pilotage"
+        android:id="@+id/text_interface_pilotage"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="130dp"
+        android:textStyle="bold|italic" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_type_pilotage"
+        android:entries="@array/pilotagetype_arrays"
+        android:prompt="@string/pilotagetype_prompt"
+        android:layout_marginLeft="34dp"
+        android:spinnerMode="dropdown"
+        android:layout_alignBaseline="@+id/text_interface_pilotage"
+        android:layout_alignBottom="@+id/text_interface_pilotage"
+        android:layout_alignStart="@+id/chk_altitude_max" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Configuration drone"
+        android:id="@+id/text_config_drone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="29dp"
+        android:textStyle="bold|normal|italic"
+        android:layout_below="@+id/text_interface_pilotage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Choix caméra :"
+        android:id="@+id/text_caméra_choice"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/text_config_drone"
+        android:layout_alignEnd="@+id/text_interface_pilotage" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cameraspinner"
+        android:entries="@array/cameratype_arrays"
+        android:prompt="@string/cameratype_prompt"
+        android:layout_marginLeft="34dp"
+        android:layout_below="@+id/text_caméra_choice"
+        android:layout_alignStart="@+id/text_config_drone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Altitude max :"
+        android:id="@+id/text_altitude_max"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/cameraspinner"
+        android:layout_alignStart="@+id/seekbar_altitude_max"
+        android:layout_marginTop="5dp" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ON/OFF"
+        android:id="@+id/chk_altitude_max"
+        android:textAlignment="textEnd"
+        android:singleLine="false"
+        android:allowUndo="false"
+        android:checked="false"
+        android:layout_alignBaseline="@+id/text_altitude_max"
+        android:layout_alignBottom="@+id/text_altitude_max"
+        android:layout_toEndOf="@+id/text_config_drone"
+        android:layout_marginLeft="50dp" />
+
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_altitude_max"
+        android:max="5000"
+        android:layout_below="@+id/text_altitude_max"
+        android:layout_marginTop="3dp"
+        android:layout_alignStart="@+id/text_caméra_choice"
+        android:layout_alignEnd="@+id/chk_rotation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Maximum yaw speed :"
+        android:id="@+id/text_maximum_yaw_speed"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/seekbar_altitude_max"
+        android:layout_alignStart="@+id/seekbar_altitude_max"
+        android:layout_marginTop="5dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_yaw_speed"
+        android:max="5000"
+        android:layout_below="@+id/text_maximum_yaw_speed"
+        android:layout_alignStart="@+id/seekbar_altitude_max"
+        android:layout_marginTop="1dp"
+        android:layout_alignEnd="@+id/seekbar_altitude_max" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_vertical_speed_max"
+        android:max="5000"
+        android:layout_below="@+id/text_maximum_vertcal_speed"
+        android:layout_marginTop="1dp"
+        android:layout_alignStart="@+id/seekbar_yaw_speed"
+        android:layout_alignEnd="@+id/seekbar_yaw_speed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Maximum vertical speed :"
+        android:id="@+id/text_maximum_vertcal_speed"
+        android:layout_below="@+id/seekbar_yaw_speed"
+        android:layout_alignStart="@+id/text_maximum_yaw_speed"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Maximum pitch &amp; roll angles :"
+        android:id="@+id/text_maximum_pitch_roll_angles"
+        android:layout_below="@+id/seekbar_vertical_speed_max"
+        android:layout_alignStart="@+id/text_maximum_vertcal_speed"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/txt_alt_max_settings"
+        android:layout_alignTop="@+id/text_altitude_max"
+        android:layout_toEndOf="@+id/text_altitude_max"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/txt_yaw_max_settings"
+        android:layout_above="@+id/seekbar_yaw_speed"
+        android:layout_toEndOf="@+id/text_maximum_yaw_speed"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/txt_vert_max_settings"
+        android:layout_alignTop="@+id/text_maximum_vertcal_speed"
+        android:layout_toEndOf="@+id/text_maximum_vertcal_speed"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/txt_pitch_roll_max_settings"
+        android:layout_above="@+id/seekbar_pitch_roll_max"
+        android:layout_toEndOf="@+id/text_maximum_pitch_roll_angles"
+        android:layout_marginLeft="2dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J&apos;utilise l&apos;ARDrone dans\nune zone autorisée au vol"
+        android:id="@+id/chk_accept_use"
+        android:onClick="ClickAccept"
+        android:checked="false"
+        android:layout_below="@+id/AffJoy"
+        android:layout_alignStart="@+id/seekbar_pitch_roll_max" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_pitch_roll_max"
+        android:max="5000"
+        android:layout_below="@+id/text_maximum_pitch_roll_angles"
+        android:layout_alignStart="@+id/seekbar_vertical_speed_max"
+        android:layout_alignEnd="@+id/seekbar_vertical_speed_max" />
+
+    <CheckBox
+        android:text="Activer pour contrôler avec les joysticks virtuels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AffJoy"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/seekbar_pitch_roll_max"
+        android:layout_alignStart="@+id/chk_accept_use" />
+
+
+</RelativeLayout>

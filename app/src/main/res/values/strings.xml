@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Pilotage</string>
+    <string name="ATCMD" />
+    <string name="AT_CMD">AT Command</string>
+    <string name="BuildCMD">BuildCMD</string>
+    <string name="Decollage">Decollage</string>
+    <string name="Aterissage" />
+    <string name="Aterissage_">Atterissage</string>
+    <string name="AffJoy">AffichageJoy</string>
+    <string name="Urgency">Urgence</string>
+    <string name="X__double_values">X (double) :</string>
+    <string name="Y_double_values">Y (double) :</string>
+    <string name="PilotageHorizontal" />
+    <string name="Pilot_Hor">Pilotage Horizontal</string>
+    <string name="Pilot_Hor_ind">Pilotage horizontal :</string>
+    <string name="Pilot_Vert">Pilotage Verticale :</string>
+    <string name="Pilotage_Vert_butt">Pilotage Vertical</string>
+    <string name="Pilot_vert_indic">Pilotage vertical :</string>
+    <string name="Deplacement_x_y">Gauche/Droite :</string>
+    <string name="Dep_av_ar">Avant/Arrière</string>
+    <string name="Dep_av_arr_">Avant/Arrière :</string>
+    <string name="Rot_vert">Rotation vertical :</string>
+    <string name="mont_desc">Monte/Descend :</string>
+    <string name="indic_zone_morte">Zone Morte :</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_setting_startup">SettingStartupActivity</string>
+    <string name="battery">Batterie</string>
+    <string name="altitude">Altitude</string>
+    <string name="vitesse">Vitesse</string>
+    <string name="avant_arriere">Av/Arr</string>
+    <string name="gauche_droite" />
+    <string name="gauche_droite_2">G/D</string>
+    <string name="Rotation" />
+    <string name="rotation2">Rotation</string>
+    <string-array name="cameratype_arrays">
+        <item>Horizontal</item>
+        <item>Vertical</item>
+    </string-array>
+    <string-array name="pilotagetype_arrays">
+        <item>Joystick</item>
+        <item>Accéléromètre</item>
+    </string-array>
+    <string name="cameratype_prompt">Camera Type</string>
+    <string name="pilotagetype_prompt">Pilotage Type</string>
+</resources>
