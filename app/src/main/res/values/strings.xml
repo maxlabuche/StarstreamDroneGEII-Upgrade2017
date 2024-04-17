@@ -1,13 +1,37 @@
 <resources>
     <string name="app_name">Pilotage</string>
+    <string name="indicators">Indicators</string>
+    <string name="video">Video</string>
+    <string name="debug">Debug</string>
+    <string name="max_altitude">Maximum altitude :</string>
+    <string name="altitude_limit_toggle">Limit</string>
+    <string name="max_yaw_speed">Maximum yaw speed :</string>
+    <string name="max_vertical_speed">Maximum vertical speed :</string>
+    <string name="max_pitchroll_angles">Maximum pitch &amp; roll angles :</string>
+    <string name="virtual_joysticks_toggle">Virtual joystick controls</string>
+    <string name="authorized_zone_toggle">I use the drone in an area authorized for flight</string>
+    <string name="cameratype_choice">Camera :</string>
+    <string name="drone_configuration">Drone configuration</string>
+    <string name="controltype_choice">Control interface</string>
+    <string name="start">Start</string>
+    <string name="landing">Landing</string>
+    <string name="emergency_shutdown">Emergency\nshutdown</string>
+    <string name="forward_backward">Forward/Backward</string>
+    <string name="left_right">Left/Right</string>
+    <string name="battery">Battery</string>
+    <string name="altitude">Altitude</string>
+    <string name="speed">Speed</string>
+    <string name="rotation">Rotation</string>
+    <string name="flight_data">Flight data</string>
+    <string name="forward_backward_short">F/B: %1$d</string>
+    <string name="left_right_short">L/R: %1$d</string>
+    <string name="battery_short">Bat: %1$d%%</string>
+    <string name="altitude_short">Alt: %1$dm</string>
+    <string name="speed_short">Spd: %1$dm/s</string>
+    <string name="rotation_short">Rot: %1$d</string>
     <string name="ATCMD" />
     <string name="AT_CMD">AT Command</string>
     <string name="BuildCMD">BuildCMD</string>
-    <string name="Decollage">Decollage</string>
-    <string name="Aterissage" />
-    <string name="Aterissage_">Atterissage</string>
-    <string name="AffJoy">AffichageJoy</string>
-    <string name="Urgency">Urgence</string>
     <string name="X__double_values">X (double) :</string>
     <string name="Y_double_values">Y (double) :</string>
     <string name="PilotageHorizontal" />
@@ -16,32 +40,25 @@
     <string name="Pilot_Vert">Pilotage Verticale :</string>
     <string name="Pilotage_Vert_butt">Pilotage Vertical</string>
     <string name="Pilot_vert_indic">Pilotage vertical :</string>
-    <string name="Deplacement_x_y">Gauche/Droite :</string>
-    <string name="Dep_av_ar">Avant/Arrière</string>
-    <string name="Dep_av_arr_">Avant/Arrière :</string>
-    <string name="Rot_vert">Rotation vertical :</string>
-    <string name="mont_desc">Monte/Descend :</string>
-    <string name="indic_zone_morte">Zone Morte :</string>
+    <string name="Deplacement_x_y">Left/Right :</string>
+    <string name="Dep_av_ar">Forward/Backward</string>
+    <string name="Dep_av_arr_">Forward/Backward :</string>
+    <string name="Rot_vert">Vertical rotation :</string>
+    <string name="mont_desc">Up/Down :</string>
+    <string name="indic_zone_morte">Deadzone :</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
     <string name="title_activity_setting_startup">SettingStartupActivity</string>
-    <string name="battery">Batterie</string>
-    <string name="altitude">Altitude</string>
-    <string name="vitesse">Vitesse</string>
-    <string name="avant_arriere">Av/Arr</string>
-    <string name="gauche_droite" />
-    <string name="gauche_droite_2">G/D</string>
-    <string name="Rotation" />
-    <string name="rotation2">Rotation</string>
     <string-array name="cameratype_arrays">
-        <item>Horizontal</item>
-        <item>Vertical</item>
+        <item>Front</item>
+        <item>Bottom</item>
     </string-array>
-    <string-array name="pilotagetype_arrays">
+    <string-array name="controltype_arrays">
         <item>Joystick</item>
-        <item>Accéléromètre</item>
+        <item>Accelerometer</item>
     </string-array>
-    <string name="cameratype_prompt">Camera Type</string>
-    <string name="pilotagetype_prompt">Pilotage Type</string>
+    <string name="cameratype_prompt">Camera type</string>
+    <string name="pilotagetype_prompt">Control type</string>
+    <string name="drone_settings">Drone settings</string>
 </resources>

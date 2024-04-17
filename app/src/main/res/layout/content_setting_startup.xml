@@ -11,19 +11,19 @@
     tools:context="com.example.admin.pilotage.SettingStartupActivity">
 
     <TextView
+        android:id="@+id/text_Indicateurs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Indicateurs "
-        android:id="@+id/text_Indicateurs"
-        android:layout_marginLeft="15dp"
         android:layout_alignBaseline="@+id/chk_battery"
         android:layout_alignBottom="@+id/chk_battery"
         android:layout_alignParentStart="false"
         android:layout_marginStart="14dp"
+        android:layout_marginLeft="15dp"
+        android:editable="false"
         android:enabled="true"
-        android:textStyle="bold|normal|italic"
-        android:editable="false" />
+        android:text="@string/indicators"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold|normal|italic" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -56,210 +56,208 @@
         android:checked="true" />
 
     <CheckBox
+        android:id="@+id/chk_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/vitesse"
-        android:id="@+id/chk_vitesse"
-        android:textAlignment="textEnd"
-        android:layout_marginLeft="5dp"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_toEndOf="@+id/chk_altitude"
-        android:layout_marginTop="5dp"
-        android:layout_alignParentTop="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/avant_arriere"
-        android:id="@+id/chk_av_arr"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_alignTop="@+id/chk_battery"
-        android:layout_alignStart="@+id/chk_battery"
-        android:layout_marginTop="35dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gauche_droite_2"
-        android:id="@+id/chk_gd"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignTop="@+id/chk_altitude"
-        android:layout_alignStart="@+id/chk_altitude"
-        android:layout_marginTop="35dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rotation2"
-        android:id="@+id/chk_rotation"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignStart="@+id/chk_vitesse"
-        android:layout_alignTop="@+id/chk_battery"
-        android:layout_marginTop="35dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Vidéo"
-        android:id="@+id/text_video"
-        android:layout_marginLeft="15dp"
-        android:layout_toStartOf="@+id/chk_battery"
-        android:layout_marginTop="82dp" />
-
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ON/OFF"
-        android:id="@+id/chk_video_mode"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_alignTop="@+id/chk_battery"
-        android:layout_alignStart="@+id/chk_battery"
-        android:layout_marginTop="70dp"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Debug"
-        android:id="@+id/text_debug"
-        android:layout_marginLeft="40dp"
-        android:layout_alignTop="@+id/text_video"
-        android:layout_alignStart="@+id/chk_gd" />
-
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ON/OFF"
-        android:id="@+id/chk_debug"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="true"
-        android:layout_alignTop="@+id/chk_video_mode"
-        android:layout_alignStart="@+id/chk_rotation" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Interface pilotage"
-        android:id="@+id/text_interface_pilotage"
-        android:layout_marginLeft="15dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="130dp"
-        android:textStyle="bold|italic" />
-    <Spinner
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/chk_altitude"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/speed"
+        android:textAlignment="textEnd" />
+
+    <CheckBox
+        android:id="@+id/chk_forward_backward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_type_pilotage"
-        android:entries="@array/pilotagetype_arrays"
-        android:prompt="@string/pilotagetype_prompt"
-        android:layout_marginLeft="34dp"
-        android:spinnerMode="dropdown"
-        android:layout_alignBaseline="@+id/text_interface_pilotage"
-        android:layout_alignBottom="@+id/text_interface_pilotage"
-        android:layout_alignStart="@+id/chk_altitude_max" />
+        android:layout_alignStart="@+id/chk_battery"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="32dp"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/forward_backward"
+        android:textAlignment="textEnd" />
+
+    <CheckBox
+        android:id="@+id/chk_left_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/chk_altitude"
+        android:layout_alignTop="@+id/chk_altitude"
+        android:layout_marginStart="-79dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="65dp"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/left_right"
+        android:textAlignment="textEnd" />
+
+    <CheckBox
+        android:id="@+id/chk_rotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/chk_speed"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="35dp"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/rotation"
+        android:textAlignment="textEnd" />
+
+
+    <CheckBox
+        android:id="@+id/chk_video_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/chk_battery"
+        android:layout_alignTop="@+id/chk_battery"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="67dp"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/video"
+        android:textAlignment="textEnd" />
+
+    <CheckBox
+        android:id="@+id/chk_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/chk_rotation"
+        android:layout_alignTop="@+id/chk_video_mode"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:allowUndo="false"
+        android:checked="true"
+        android:singleLine="false"
+        android:text="@string/debug"
+        android:textAlignment="textEnd" />
 
     <TextView
+        android:id="@+id/text_interface_pilotage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="130dp"
+        android:text="@string/controltype_choice"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Configuration drone"
+        android:textStyle="bold|italic" />
+
+    <Spinner
+        android:id="@+id/spinner_type_pilotage"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_interface_pilotage"
+        android:layout_alignStart="@+id/chk_altitude_max"
+        android:layout_alignBottom="@+id/text_interface_pilotage"
+        android:layout_marginStart="-105dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginBottom="-2dp"
+        android:entries="@array/controltype_arrays"
+        android:prompt="@string/pilotagetype_prompt"
+        android:spinnerMode="dropdown" />
+
+    <TextView
         android:id="@+id/text_config_drone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_interface_pilotage"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="29dp"
-        android:textStyle="bold|normal|italic"
-        android:layout_below="@+id/text_interface_pilotage" />
+        android:text="@string/drone_configuration"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold|normal|italic" />
+
 
     <TextView
+        android:id="@+id/text_cameratype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Choix caméra :"
-        android:id="@+id/text_caméra_choice"
-        android:layout_marginLeft="15dp"
         android:layout_below="@+id/text_config_drone"
-        android:layout_alignEnd="@+id/text_interface_pilotage" />
+        android:layout_alignEnd="@+id/text_interface_pilotage"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="31dp"
+        android:text="@string/cameratype_choice"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/cameraspinner"
-        android:entries="@array/cameratype_arrays"
-        android:prompt="@string/cameratype_prompt"
-        android:layout_marginLeft="34dp"
-        android:layout_below="@+id/text_caméra_choice"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_cameratype"
         android:layout_alignStart="@+id/text_config_drone"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
-
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="82dp"
+        android:entries="@array/cameratype_arrays"
+        android:prompt="@string/cameratype_prompt" />
 
     <TextView
+        android:id="@+id/text_altitude_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Altitude max :"
-        android:id="@+id/text_altitude_max"
-        android:layout_marginLeft="15dp"
         android:layout_below="@+id/cameraspinner"
         android:layout_alignStart="@+id/seekbar_altitude_max"
-        android:layout_marginTop="5dp" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/max_altitude"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
     <CheckBox
+        android:id="@+id/chk_altitude_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ON/OFF"
-        android:id="@+id/chk_altitude_max"
-        android:textAlignment="textEnd"
-        android:singleLine="false"
-        android:allowUndo="false"
-        android:checked="false"
         android:layout_alignBaseline="@+id/text_altitude_max"
         android:layout_alignBottom="@+id/text_altitude_max"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="-7dp"
         android:layout_toEndOf="@+id/text_config_drone"
-        android:layout_marginLeft="50dp" />
-
+        android:allowUndo="false"
+        android:checked="false"
+        android:singleLine="false"
+        android:text="@string/altitude_limit_toggle"
+        android:textAlignment="textEnd" />
 
     <SeekBar
+        android:id="@+id/seekbar_altitude_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar_altitude_max"
-        android:max="5000"
         android:layout_below="@+id/text_altitude_max"
-        android:layout_marginTop="3dp"
-        android:layout_alignStart="@+id/text_caméra_choice"
-        android:layout_alignEnd="@+id/chk_rotation" />
+        android:layout_alignStart="@+id/text_cameratype"
+        android:layout_alignEnd="@+id/chk_rotation"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:max="5000" />
 
     <TextView
+        android:id="@+id/text_maximum_yaw_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Maximum yaw speed :"
-        android:id="@+id/text_maximum_yaw_speed"
-        android:layout_marginLeft="15dp"
         android:layout_below="@+id/seekbar_altitude_max"
         android:layout_alignStart="@+id/seekbar_altitude_max"
-        android:layout_marginTop="5dp" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/max_yaw_speed"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <SeekBar
         android:layout_width="wrap_content"
@@ -276,30 +274,31 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekbar_vertical_speed_max"
         android:max="5000"
-        android:layout_below="@+id/text_maximum_vertcal_speed"
+        android:layout_below="@+id/text_maximum_vertical_speed"
         android:layout_marginTop="1dp"
         android:layout_alignStart="@+id/seekbar_yaw_speed"
         android:layout_alignEnd="@+id/seekbar_yaw_speed" />
 
     <TextView
+        android:id="@+id/text_maximum_vertical_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Maximum vertical speed :"
-        android:id="@+id/text_maximum_vertcal_speed"
         android:layout_below="@+id/seekbar_yaw_speed"
         android:layout_alignStart="@+id/text_maximum_yaw_speed"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:text="@string/max_vertical_speed"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
+        android:id="@+id/text_maximum_pitch_roll_angles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Maximum pitch &amp; roll angles :"
-        android:id="@+id/text_maximum_pitch_roll_angles"
         android:layout_below="@+id/seekbar_vertical_speed_max"
-        android:layout_alignStart="@+id/text_maximum_vertcal_speed"
-        android:layout_marginTop="5dp" />
+        android:layout_alignStart="@+id/text_maximum_vertical_speed"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/max_pitchroll_angles"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -327,8 +326,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="0"
         android:id="@+id/txt_vert_max_settings"
-        android:layout_alignTop="@+id/text_maximum_vertcal_speed"
-        android:layout_toEndOf="@+id/text_maximum_vertcal_speed"
+        android:layout_alignTop="@+id/text_maximum_vertical_speed"
+        android:layout_toEndOf="@+id/text_maximum_vertical_speed"
         android:layout_marginLeft="2dp" />
 
     <TextView
@@ -342,32 +341,39 @@
         android:layout_marginLeft="2dp" />
 
     <CheckBox
+        android:id="@+id/chk_authorized_zone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="J&apos;utilise l&apos;ARDrone dans\nune zone autorisée au vol"
-        android:id="@+id/chk_accept_use"
-        android:onClick="ClickAccept"
+        android:layout_below="@+id/chk_virtual_joysticks"
+        android:layout_alignStart="@+id/seekbar_pitch_roll_max"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:checked="false"
-        android:layout_below="@+id/AffJoy"
-        android:layout_alignStart="@+id/seekbar_pitch_roll_max" />
+        android:onClick="ClickAccept"
+        android:text="@string/authorized_zone_toggle"
+        android:textStyle="bold" />
 
     <SeekBar
+        android:id="@+id/seekbar_pitch_roll_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/seekbar_pitch_roll_max"
-        android:max="5000"
         android:layout_below="@+id/text_maximum_pitch_roll_angles"
         android:layout_alignStart="@+id/seekbar_vertical_speed_max"
-        android:layout_alignEnd="@+id/seekbar_vertical_speed_max" />
+        android:layout_alignEnd="@+id/seekbar_vertical_speed_max"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:max="5000" />
 
     <CheckBox
-        android:text="Activer pour contrôler avec les joysticks virtuels"
+        android:id="@+id/chk_virtual_joysticks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/AffJoy"
-        android:layout_marginTop="14dp"
         android:layout_below="@+id/seekbar_pitch_roll_max"
-        android:layout_alignStart="@+id/chk_accept_use" />
+        android:layout_alignStart="@+id/chk_authorized_zone"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/virtual_joysticks_toggle" />
 
 
 </RelativeLayout>

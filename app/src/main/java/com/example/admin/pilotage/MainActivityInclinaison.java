@@ -186,15 +186,15 @@ public class MainActivityInclinaison extends AppCompatActivity  {
         iVitMax=mNavDataManager.Speedmax();
         iVitMoy=mNavDataManager.Speedmoy();
 
-        mStrBuffer.append("Valeurs maximales :\n");
+        mStrBuffer.append("Max. values :\n");
         mStrBuffer.append("\n");
         mStrBuffer.append("Altitude: " + iAltMax + " cm\n");
-        mStrBuffer.append("Vitesse: " + iVitMax + " cm/s\n");
+        mStrBuffer.append("Speed: " + iVitMax + " cm/s\n");
         mStrBuffer.append("\n\n");
-        mStrBuffer.append("Valeurs moyennes :\n");
+        mStrBuffer.append("Min. values :\n");
         mStrBuffer.append("\n");
         mStrBuffer.append("Altitude: "+iAltMoy+" cm\n");
-        mStrBuffer.append("Vitesse: "+iVitMoy+" cm/s\n");
+        mStrBuffer.append("Speed: "+iVitMoy+" cm/s\n");
         mStrBuffer.append("\n");
 
         mBuilderAffichageNavDataResume.setCancelable(true);
@@ -229,12 +229,12 @@ public class MainActivityInclinaison extends AppCompatActivity  {
         {
             while (c.moveToNext()) {
 
-                mStrBuffer.append("Temps: "+(c.getInt(c.getColumnIndex(NavdataManager_BDD.KEY_ID))/2)+" s\n");
-                mStrBuffer.append("Batterie: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_BATTERY_NAV))+" %\n");
+                mStrBuffer.append("Temp: "+(c.getInt(c.getColumnIndex(NavdataManager_BDD.KEY_ID))/2)+" s\n");
+                mStrBuffer.append("Battery: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_BATTERY_NAV))+" %\n");
                 mStrBuffer.append("Altitude: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_ALTITUDE_NAV))+" cm\n");
-                mStrBuffer.append("Vitesse: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_SPEED_NAV))+ " cm/s\n");
-                mStrBuffer.append("Av/Arr: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_INCLAVAR_NAV))+ "%\n");
-                mStrBuffer.append("G/D: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_INCLDG_NAV))+ " %\n");
+                mStrBuffer.append("Speed: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_SPEED_NAV))+ " cm/s\n");
+                mStrBuffer.append("F/B: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_INCLAVAR_NAV))+ "%\n");
+                mStrBuffer.append("L/R: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_INCLDG_NAV))+ " %\n");
                 mStrBuffer.append("Rotation: "+c.getString(c.getColumnIndex(NavdataManager_BDD.KEY_ROTATION_NAV))+ " %\n");
                 mStrBuffer.append("\n");
             }
@@ -352,8 +352,8 @@ public class MainActivityInclinaison extends AppCompatActivity  {
         public void run() {
             if(bDebugMode==true) {
                 txtATComand.setText(strATCWD);
-                txtDebugAffAv_Arr.setText("Av/Arr :"+fAvantArriere+" %");
-                txtTxtDebugAffG_D.setText("G/D : "+fGaucheDroite+" %");
+                txtDebugAffAv_Arr.setText("F/B :"+fAvantArriere+" %");
+                txtTxtDebugAffG_D.setText("L/R : "+fGaucheDroite+" %");
             }
             SetIndicatorNavData();
         }
@@ -545,25 +545,24 @@ public class MainActivityInclinaison extends AppCompatActivity  {
 
     private void SetIndicatorNavData(){
         if (bIndicBatterie == true) {
-            txtNavBatterie.setText("Batt: " + iNavBatterie + "%");
+            txtNavBatterie.setText(getString(R.string.battery_short, iNavBatterie));
         }
         if(bIndicAltitude ==true) {
-            txtNavAltitude.setText("Alt: " + iNavAv_Ar + "m");
+            txtNavAltitude.setText(getString(R.string.altitude_short, iNavAv_Ar));
         }
         if(bIndicVitesse==true) {
-            txtNavSpeed.setText("Vitt: " + iNavSpeed + "m/s");
+            txtNavSpeed.setText(getString(R.string.speed_short, iNavSpeed));
         }
         if(bIndicAvArr==true) {
-            txtNavAvArr.setText("Av/Ar: " + iNavAv_Ar);
+            txtNavAvArr.setText(getString(R.string.forward_backward_short, iNavAv_Ar));
         }
         if(bIndicGD ==true) {
-            txtNavG_D.setText("G/D: " + iNavG_D);
+            txtNavG_D.setText(getString(R.string.left_right_short, iNavG_D));
         }
         if(bIndicRotation==true) {
-            txtNavRot.setText("Rot :" + iNavRot);
+            txtNavRot.setText(getString(R.string.rotation_short, iNavRot));
         }
     }
-
 
 }
 

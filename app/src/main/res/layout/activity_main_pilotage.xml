@@ -6,8 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
     <SurfaceView
         android:id="@+id/surface"
@@ -24,32 +23,35 @@
         android:clickable="false" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Decollage"
         android:id="@+id/buttDecollage"
-        android:onClick="Decollage"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:background="#85ffffff" />
+        android:layout_alignParentTop="true"
+        android:background="#85ffffff"
+        android:onClick="Decollage"
+        android:text="@string/start"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Aterissage_"
         android:id="@+id/buttAtterissage"
-        android:onClick="Aterissage"
-        android:layout_centerHorizontal="true"
-        android:background="#85ffffff" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Urgency"
+        android:layout_centerHorizontal="true"
+        android:background="#85ffffff"
+        android:onClick="Aterissage"
+        android:text="@string/landing"
+        android:textAlignment="center" />
+
+    <Button
         android:id="@+id/buttUrgence"
-        android:onClick="Urgence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:background="#85ffffff" />
+        android:background="#F44336"
+        android:onClick="Urgence"
+        android:text="@string/emergency_shutdown"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,14 +73,14 @@
         android:layout_marginBottom="20dp" />
 
     <TextView
+        android:id="@+id/indic_altitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Altitude"
-        android:id="@+id/indic_altitude"
         android:layout_below="@+id/buttAtterissage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:text="@string/altitude"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <Button
@@ -104,72 +106,73 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
+        android:id="@+id/indic_batterie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Batterie"
-        android:id="@+id/indic_batterie"
-        android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/JoyLeft"
-        android:layout_marginEnd="35dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/battery"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <TextView
+        android:id="@+id/indic_vitesse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Vitesse"
-        android:id="@+id/indic_vitesse"
         android:layout_below="@+id/indic_altitude"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:text="@string/speed"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <TextView
+        android:id="@+id/indic_avant_arriere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Avant / Arriere"
-        android:id="@+id/indic_avant_arriere"
         android:layout_below="@+id/indic_vitesse"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:text="@string/forward_backward_short"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <TextView
+        android:id="@+id/indic_gauche_droite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Gauche / Droite"
-        android:id="@+id/indic_gauche_droite"
         android:layout_below="@+id/indic_avant_arriere"
         android:layout_alignEnd="@+id/indic_avant_arriere"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="33dp"
+        android:text="@string/left_right_short"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <TextView
+        android:id="@+id/indic_rotation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Rotation"
-        android:id="@+id/indic_rotation"
         android:layout_below="@+id/indic_gauche_droite"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:text="@string/rotation"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#0015ff" />
 
     <Button
+        android:id="@+id/butt_data_flying"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Données vol"
-        android:id="@+id/butt_data_flying"
-        android:onClick="ShowSimpleFlightData"
-        android:enabled="true"
-        android:clickable="false"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:enabled="true"
+        android:onClick="ShowSimpleFlightData"
+        android:text="@string/flight_data" />
 
     <com.example.admin.pilotage.JoystickView
         android:layout_width="200dp"
@@ -178,10 +181,6 @@
         android:layout_row="41"
         android:layout_column="0"
         android:layout_below="@+id/indic_gauche_droite"
-
         android:layout_alignParentStart="true" />
-
-    k
-
 
 </RelativeLayout>

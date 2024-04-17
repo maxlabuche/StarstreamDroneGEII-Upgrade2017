@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -73,14 +72,14 @@ public class SettingStartupActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         cbBatterie = (CheckBox) findViewById(R.id.chk_battery);
         cbAltitude = (CheckBox) findViewById(R.id.chk_altitude);
-        cbVitesse = (CheckBox) findViewById(R.id.chk_vitesse);
-        cbAvArr = (CheckBox) findViewById(R.id.chk_av_arr);
-        cbGD = (CheckBox) findViewById(R.id.chk_gd);
+        cbVitesse = (CheckBox) findViewById(R.id.chk_speed);
+        cbAvArr = (CheckBox) findViewById(R.id.chk_forward_backward);
+        cbGD = (CheckBox) findViewById(R.id.chk_left_right);
         cbRotation = (CheckBox) findViewById(R.id.chk_rotation);
-        cbAffJoy= (CheckBox) findViewById(R.id.AffJoy);
+        cbAffJoy= (CheckBox) findViewById(R.id.chk_virtual_joysticks);
 
         cbActivationVideo = (CheckBox) findViewById(R.id.chk_video_mode);
-        cbAffJoy = (CheckBox) findViewById(R.id.AffJoy);
+        cbAffJoy = (CheckBox) findViewById(R.id.chk_virtual_joysticks);
         cbDebugMode = (CheckBox) findViewById(R.id.chk_debug);
 
         spinInterfacePilotage = (Spinner)findViewById(R.id.spinner_type_pilotage);
@@ -97,7 +96,7 @@ public class SettingStartupActivity extends AppCompatActivity {
         CurrentVerticalSpeed = (TextView)findViewById(R.id.txt_vert_max_settings);
 
 
-        cbAcceptUse =  (CheckBox) findViewById(R.id.chk_accept_use);
+        cbAcceptUse =  (CheckBox) findViewById(R.id.chk_authorized_zone);
         fab = (FloatingActionButton) findViewById(R.id.fab);
 
         setSupportActionBar(toolbar);
@@ -105,7 +104,7 @@ public class SettingStartupActivity extends AppCompatActivity {
         //We hide the button at start
         fab.hide();
 
-        getSupportActionBar().setTitle("Configuration de démarrage du drone");
+        getSupportActionBar().setTitle(R.string.drone_settings);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 

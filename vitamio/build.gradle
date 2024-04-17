@@ -1,10 +1,25 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "23.0.2"
+    compileSdk 22
 
     defaultConfig {
+        ndk {
+            abiFilters "armeabi"
+            //, "armeabi-v7a", "x86", "mips"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            jniLibs.srcDirs = ['libs']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+
     }
 
     buildTypes {
@@ -12,5 +27,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
